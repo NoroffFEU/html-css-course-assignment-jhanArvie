@@ -5,8 +5,12 @@
 @import url("./variables.css");
 /* Feel free to add as many of these imports as you need */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
 body {
   background-color: #1e1e1e;
+  margin: 0 15px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /* NAVIGATION STARTS HERE */
@@ -16,22 +20,20 @@ header {
   display: flex;
   justify-content: space-between;
   position: relative;
-  height: 75px;
-  width: 100%;
-  padding: 20px 5px;
 }
 
 header .brand {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 10px;
 }
 
 .brand-name {
   font-family: "Agency FB";
   color: #ff6b00;
   font-size: 16px;
-  padding: 5px 0;
+  margin: 5px 0;
 }
 
 .search-container {
@@ -50,7 +52,7 @@ header .brand {
   border: none;
   outline: none;
   background-color: #1e1e1e;
-  width: 100px;
+  width: 125px;
   opacity: 100%;
 }
 
@@ -59,14 +61,14 @@ header .brand {
   position: absolute;
   align-items: center;
   right: 0;
-  height: 40px;
-  width: 40px;
+  align-self: center;
+  margin-top: 15px;
 }
 
 .hamburger {
   position: relative;
   background: #fff;
-  width: 30px;
+  width: 40px;
   height: 5px;
   border-radius: 10px;
   cursor: pointer;
@@ -79,7 +81,7 @@ header .brand {
   /* hamburger top and buttom*/
   content: "";
   position: absolute;
-  width: 30px;
+  width: 40px;
   height: 5px;
   background: #fff;
   border-radius: 10px;
@@ -90,12 +92,12 @@ header .brand {
 
 .hamburger::before {
   top: -10px;
-  width: 30px;
+  width: 40px;
 }
 
 .hamburger::after {
   top: 10px;
-  width: 30px;
+  width: 40px;
 }
 
 .toggle-menu {
@@ -154,7 +156,7 @@ nav .nav-menu {
 nav .nav-menu li a {
   position: relative;
   font-size: 16px;
-  padding: 10px 5px;
+  /* padding: 10px 5px; */
 }
 
 nav .nav-menu li a:hover {
@@ -165,13 +167,47 @@ nav .nav-menu li a:hover {
 @media screen and (min-width: 769px) {
   .hamburger,
   .toggle-menu {
-    /* display: none; */
+    display: none;
   }
   header {
-    background-color: blue;
-    padding: 50px 5px;
+    margin-top: 10;
+  }
+  header .brand {
+    display: flex;
   }
 
+  .brand-name {
+    font-size: 25px;
+  }
+  .brand .brand-image {
+    width: 80px;
+    height: auto;
+  }
+  .search-container {
+    margin-left: 50px;
+    padding-right: 20px;
+  }
+
+  .navigation {
+    display: flex;
+  }
+  nav .nav-menu {
+    flex-direction: row;
+    right: 0;
+    height: 0;
+    top: 40px;
+    padding-top: 0;
+    transition: 0.3s;
+  }
+
+  .nav-menu li {
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+  }
+  nav .nav-menu li a {
+    font-size: 18px;
+  }
   nav .nav-menu li a:hover {
     position: relative;
     box-shadow: 0 2px 0 #fff; /* enable to desktop */
