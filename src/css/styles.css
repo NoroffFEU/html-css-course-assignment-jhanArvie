@@ -4,117 +4,176 @@
 /* These are marked with an underscore: */
 @import url("./variables.css");
 /* Feel free to add as many of these imports as you need */
-
-/* body {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+body {
+  background-color: #1e1e1e;
 }
- */
-/* Hide the links inside the navigation menu */
-/* header nav .btn-mobile-menu {
-  display: none;
-} */
+
+/* NAVIGATION STARTS HERE */
 
 header {
-  background-color: #333; /* Change to desired background color */
-  color: #fff; /* Change to desired text color */
-  padding: 10px 20px;
+  /* background-color: red; */ /* remove later */
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 75px;
+  width: 100%;
+  padding: 20px 5px;
+}
+
+header .brand {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Styling the logo */
-h1 {
-  margin: 0;
-  font-size: 24px; /* Change to desired font size */
+.brand-name {
+  font-family: "Agency FB";
+  color: #ff6b00;
+  font-size: 16px;
+  padding: 5px 0;
 }
 
-/* Styling the navigation */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+.search-container {
+  margin-left: 20px;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ff6b00;
 }
 
-nav ul li {
-  display: inline-block;
-  margin-right: 10px;
+.search-button {
+  padding: 0 10px;
 }
 
-nav ul li a {
-  color: #fff; /* Change to desired link color */
-  text-decoration: none;
+.search-input {
+  border: none;
+  outline: none;
+  background-color: #1e1e1e;
+  width: 100px;
+  opacity: 100%;
 }
 
-/* Styling the mobile menu button */
-.btn_mobile_menu {
-  display: none; /* Hide by default */
+.hamburger-checkbox {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  right: 0;
+  height: 40px;
+  width: 40px;
 }
 
-/* Styling the hamburger menu icon */
-.mainlogo {
-  display: none; /* Hide by default */
+.hamburger {
+  position: relative;
+  background: #fff;
+  width: 30px;
+  height: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  z-index: 2;
+  transition: 0.3s;
 }
 
-/* Styling for mobile devices */
-@media only screen and (max-width: 768px) {
-  nav ul {
-    display: none; /* Hide the navigation menu by default */
-    position: absolute;
-    top: 60px; /* Adjust as needed based on header height */
-    left: 0;
-    background-color: #333; /* Change to desired background color */
-    width: 100%;
-    text-align: center;
-  }
-
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  /* Show the hamburger menu icon */
-  .btn_mobile_menu:checked + label .mainlogo {
-    display: inline-block;
-  }
-
-  /* Show the navigation menu when hamburger menu icon is clicked */
-  .btn_mobile_menu:checked + label ul {
-    display: block;
-  }
-}
-
-label .mainlogo {
-  display: inline-block;
+.hamburger::before,
+.hamburger::after {
+  /* hamburger top and buttom*/
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  background: #fff;
+  border-radius: 10px;
   cursor: pointer;
+  z-index: 2; /* to make the hamburger below the checkbox */
+  transition: 0.3s;
 }
 
-/* Styling for mobile devices */
-@media only screen and (max-width: 768px) {
-  nav ul {
-    display: none; /* Hide the navigation menu by default */
-    position: absolute;
-    top: 60px; /* Adjust as needed based on header height */
-    left: 0;
-    background-color: #333; /* Change to desired background color */
-    width: 100%;
-    text-align: center;
+.hamburger::before {
+  top: -10px;
+  width: 30px;
+}
+
+.hamburger::after {
+  top: 10px;
+  width: 30px;
+}
+
+.toggle-menu {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+  opacity: 00%; /* Hiding the checkbox */
+}
+
+/* condition ~ for the sibling elements */
+.hamburger-checkbox input:checked ~ .hamburger {
+  background: transparent;
+}
+
+.hamburger-checkbox input:checked ~ .hamburger:after {
+  top: 0;
+  transform: rotate(45deg);
+  width: 30px;
+}
+
+.hamburger-checkbox input:checked ~ .hamburger::before {
+  top: 0;
+  transform: rotate(-45deg);
+  width: 30px;
+}
+
+/* makes the nav appear */
+.hamburger-checkbox:has(input:checked) + .navigation .nav-menu {
+  right: 0;
+}
+
+nav .nav-menu {
+  background-color: rgb(37, 37, 37); /*  remove change later */
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: fixed;
+  top: 75px;
+  right: -700px; /* change this to negative to hide */
+  height: 100%;
+  width: 50%;
+  padding-top: 75px;
+  padding-left: 15px;
+  z-index: 1;
+  transition: 0.3s;
+}
+.nav-menu li {
+  display: flex;
+  align-items: center;
+  padding: 15px 15px;
+}
+
+nav .nav-menu li a {
+  position: relative;
+  font-size: 16px;
+  padding: 10px 5px;
+}
+
+nav .nav-menu li a:hover {
+  position: relative;
+  /* box-shadow: 0 2px 0 #fff; */ /* enable to desktop */
+}
+
+@media screen and (min-width: 769px) {
+  .hamburger,
+  .toggle-menu {
+    /* display: none; */
+  }
+  header {
+    background-color: blue;
+    padding: 50px 5px;
   }
 
-  nav ul li {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  /* Show the hamburger menu icon */
-  .btn_mobile_menu:checked + label .mainlogo {
-    display: inline-block;
-  }
-
-  /* Show the navigation menu when hamburger menu icon is clicked */
-  .btn_mobile_menu:checked + label ul {
-    display: block;
+  nav .nav-menu li a:hover {
+    position: relative;
+    box-shadow: 0 2px 0 #fff; /* enable to desktop */
   }
 }
