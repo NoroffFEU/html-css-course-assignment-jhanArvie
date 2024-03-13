@@ -5,10 +5,11 @@
 @import url("./variables.css");
 /* Feel free to add as many of these imports as you need */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700");
 
 body {
   background-color: #1e1e1e;
-  margin: 0 15px;
+  margin: 0 0px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -21,13 +22,16 @@ header {
   justify-content: space-between;
   position: relative;
   z-index: 10;
+  padding-top: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 header .brand {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
+  justify-content: end;
 }
 
 .brand-name {
@@ -52,8 +56,8 @@ header .brand {
 .search-input {
   border: none;
   outline: none;
-  background-color: #1e1e1e;
-  width: 125px;
+  background-color: transparent;
+  width: 120px;
   opacity: 100%;
 }
 
@@ -61,9 +65,8 @@ header .brand {
   display: flex;
   position: absolute;
   align-items: center;
-  right: 0;
+  right: 1.25rem;
   align-self: center;
-  margin-top: 15px;
 }
 
 .hamburger {
@@ -139,10 +142,10 @@ nav .nav-menu {
   align-items: center;
   justify-content: start;
   position: fixed;
-  top: 75px;
-  right: -700px; /* change this to negative to hide */
+  top: 65px;
+  right: -1000px; /* change this to negative to hide */
   height: 100%;
-  width: 50%;
+  width: 100%;
   padding-top: 75px;
   padding-left: 15px;
   z-index: 1;
@@ -151,7 +154,7 @@ nav .nav-menu {
 .nav-menu li {
   display: flex;
   align-items: center;
-  padding: 15px 15px;
+  padding: 20px 20px;
 }
 
 nav .nav-menu li a {
@@ -165,14 +168,91 @@ nav .nav-menu li a:hover {
   /* box-shadow: 0 2px 0 #fff; */ /* enable to desktop */
 }
 
+/* HERO SECTION */
+.hero-image {
+  background: url(/assets/images/poster-pictures/f-square-4.png) no-repeat
+    center;
+  background-size: cover;
+  height: 300px; /* change this on desktop */
+  margin: 0;
+}
+
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1rem;
+  position: relative;
+}
+
+.home-hero p {
+  display: none;
+}
+
+.home-featured {
+  position: absolute;
+  border-bottom: 7px solid #ff6b00;
+  padding-bottom: 0.4rem;
+  left: 0;
+  bottom: 0.5rem;
+  padding-left: 30px;
+}
+.home-featured h1 {
+  color: #fff;
+  font-family: Oswald;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.view-details {
+  background-color: #858585;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* move to desktop */
+.watch-btn {
+  display: none;
+}
+
+.cus-plybtn {
+  font-size: 5em; /* the content inside the circle */
+  color: #fff;
+  display: grid; /* to place the triangle in the center */
+  place-items: center; /* to place the triangle in the center */
+  height: 1em; /* the container */
+  width: 1em;
+  border-radius: 50%;
+  border: 2px solid #ff6b00;
+  background: transparent;
+
+  color: pointer;
+}
+
+.cus-plybtn::before {
+  content: "";
+  display: inline-block;
+  border-left: 0.33em solid;
+  border-top: 0.22em solid transparent;
+  border-bottom: 0.22em solid transparent;
+}
+
+/* DESKTOP STARTS HERE */
 @media screen and (min-width: 769px) {
   .hamburger,
   .toggle-menu {
     display: none;
   }
-  header {
-    margin-top: 10;
-  }
+
   header .brand {
     display: flex;
   }
@@ -185,13 +265,10 @@ nav .nav-menu li a:hover {
     height: auto;
   }
   .search-container {
-    margin-left: 50px;
-    padding-right: 20px;
+    margin-left: 35px;
+    padding-right: 10px;
   }
 
-  .navigation {
-    display: flex;
-  }
   nav .nav-menu {
     flex-direction: row;
     right: 0;
@@ -199,12 +276,14 @@ nav .nav-menu li a:hover {
     top: 40px;
     padding-top: 0;
     transition: 0.3s;
+    position: relative;
   }
 
   .nav-menu li {
     display: flex;
     align-items: center;
-    padding: 0 14px;
+    gap: 3px;
+    padding: 15px;
   }
   nav .nav-menu li a {
     font-size: 18px;
@@ -213,6 +292,74 @@ nav .nav-menu li a:hover {
     position: relative;
     box-shadow: 0 2px 0 #fff; /* enable to desktop */
   }
-}
 
-/* HOME HERO SECTION  */
+  /* HERO SECTION */
+  .hero-image {
+    height: 750px; /* change this on desktop */
+  }
+
+  .cus-plybtn {
+    display: none;
+  }
+  .home-hero {
+    padding: 0 0;
+    justify-items: start;
+    align-items: left;
+  }
+
+  .home-hero p {
+    display: flex;
+    position: relative;
+    font-size: 18px;
+  }
+
+  .home-featured {
+    position: relative;
+    border-bottom: 7px solid #ff6b00;
+    margin-right: 50%;
+    margin-left: 10%;
+    padding-left: 0;
+    margin-top: 5%;
+  }
+
+  .home-featured h1 {
+    color: #fff;
+    font-family: Oswald;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .view-details {
+    background-color: #858585;
+    color: #fff;
+    font-size: 18px;
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  /* move to desktop */
+  .watch-btn {
+    font-size: 18px;
+
+    display: inline;
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+  }
+
+  .watch-btn:hover {
+    background-color: #b94e02;
+  }
+}
