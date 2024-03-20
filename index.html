@@ -13,47 +13,47 @@
     <link rel="stylesheet" href="src/css/styles.css" />
   </head>
   <body>
-    <figure class="hero-image">
-      <header>
-        <div class="brand">
-          <a href="index.html"
+    <header>
+      <div class="brand">
+        <a href="index.html"
+          ><img
+            class="brand-image"
+            src="/assets/images/logo.png"
+            alt="Camera Logo Image"
+            height="50px"
+            width="50px"
+        /></a>
+        <h2 class="brand-name">
+          Square <br />
+          Eyes
+        </h2>
+
+        <div class="search-container">
+          <label for="search"
             ><img
-              class="brand-image"
-              src="/assets/images/logo.png"
-              alt="Camera Logo Image"
-              height="50px"
-              width="50px"
-          /></a>
-          <h2 class="brand-name">
-            Square <br />
-            Eyes
-          </h2>
-
-          <div class="search-container">
-            <label for="search"
-              ><img
-                class="search-button"
-                src="/assets/images/search-button.png"
-                alt="Search Button"
-            /></label>
-            <input type="search" class="search-input" placeholder="Search..." />
-          </div>
+              class="search-button"
+              src="/assets/images/search-button.png"
+              alt="Search Button"
+          /></label>
+          <input type="search" class="search-input" placeholder="Search..." />
         </div>
+      </div>
 
-        <div class="hamburger-checkbox">
-          <input type="checkbox" class="toggle-menu" />
-          <div class="hamburger"></div>
-        </div>
+      <div class="hamburger-checkbox">
+        <input type="checkbox" class="toggle-menu" />
+        <div class="hamburger"></div>
+      </div>
 
-        <nav class="navigation">
-          <ul class="nav-menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Movies</a></li>
-            <li><a href="#">TV Series</a></li>
-            <li><a href="#">About Us</a></li>
-          </ul>
-        </nav>
-      </header>
+      <nav class="navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="tv-series.html">TV Series</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <figure class="hero-image">
       <section class="home-hero">
         <div class="cus-plybtn"></div>
         <div class="home-featured">
@@ -69,7 +69,7 @@
       </section>
     </figure>
     <main>
-      <section>
+      <section class="flex-container">
         <div class="list">
           <div class="list-name">
             <h3>Latest and Upcoming Movies</h3>
@@ -130,14 +130,22 @@
         </div>
       </section>
 
-      <section class="">
-        <div class="movie-grid">
-          <div class="grid-meta">
-            <h3>Movies</h3>
-            <p>Here are the most recommended movies for you.</p>
-            <a href="movies.html">View all</a>
-          </div>
+      <section class="grid-container">
+        <div class="grid-meta">
+          <div class="grid-name flex flex-row space-between align-center">
+            <h3 class="marg-1">Movies</h3>
 
+            <a href="movies.html" class="marg-1">View all</a>
+          </div>
+          <p class="color-1">Here are the most recommended movies for you.</p>
+        </div>
+        <div class="movie-grid">
+          <div class="movie-entry">
+            <img
+              src="/assets/images/poster-pictures/portrait-8.jpeg"
+              alt="Movie"
+            />
+          </div>
           <div class="movie-entry">
             <img
               src="/assets/images/poster-pictures/portrait-8.jpeg"
@@ -177,49 +185,23 @@
         </div>
       </section>
 
-      <section class="grid-list list">
-        <div class="grid-name grid-1 list-name">
-          <h3>Movies</h3>
-          <p>Here are the most recommended movies for you.</p>
-          <a href="movies.html">View all</a>
-        </div>
-        <div class="grid-2">
-          <img
-            src="/assets/images/poster-pictures/portrait-8.jpeg"
-            alt="Movie"
-          />
-        </div>
-        <div class="grid-3">
-          <img
-            src="/assets/images/poster-pictures/portrait-7.jpeg"
-            alt="Movie"
-          />
-        </div>
-        <div class="grid-4">
-          <img
-            src="/assets/images/poster-pictures/portrait-6.jpeg"
-            alt="Movie"
-          />
-        </div>
-        <div class="grid-5">
-          <img
-            src="/assets/images/poster-pictures/portrait-5.jpeg"
-            alt="Movie"
-          />
-        </div>
-        <div class="grid-6">
-          <img
-            src="/assets/images/poster-pictures/portrait-4.jpeg"
-            alt="Movie"
-          />
-        </div>
-        <div class="grid-7">
-          <img
-            src="/assets/images/poster-pictures/portrait-3.jpeg"
-            alt="Movie"
-          />
-        </div>
-      </section>
+      <div class="line color-1"></div>
+
+      <figure class="hero-image-2">
+        <section class="home-hero-2">
+          <div class="cus-plybtn"></div>
+          <div class="home-featured-2">
+            <h1>Trojan War</h1>
+            <p>
+              In a future where artificial intelligence has turned against
+              humanity, a small band of rebels must navigate a treacherous
+              landscape of advanced technology.
+            </p>
+            <a class="watch-btn">Watch </a>
+            <a class="view-details">View Details</a>
+          </div>
+        </section>
+      </figure>
     </main>
   </body>
 </html>

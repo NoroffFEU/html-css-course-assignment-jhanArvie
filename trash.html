@@ -1,0 +1,64 @@
+<section class="grid-list list">
+  <div class="grid-name grid-1 list-name">
+    <h3>Movies</h3>
+    <p>Here are the most recommended movies for you.</p>
+    <a href="movies.html">View all</a>
+  </div>
+  <div class="grid-2">
+    <img src="/assets/images/poster-pictures/portrait-8.jpeg" alt="Movie" />
+  </div>
+  <div class="grid-3">
+    <img src="/assets/images/poster-pictures/portrait-7.jpeg" alt="Movie" />
+  </div>
+  <div class="grid-4">
+    <img src="/assets/images/poster-pictures/portrait-6.jpeg" alt="Movie" />
+  </div>
+  <div class="grid-5">
+    <img src="/assets/images/poster-pictures/portrait-5.jpeg" alt="Movie" />
+  </div>
+  <div class="grid-6">
+    <img src="/assets/images/poster-pictures/portrait-4.jpeg" alt="Movie" />
+  </div>
+  <div class="grid-7">
+    <img src="/assets/images/poster-pictures/portrait-3.jpeg" alt="Movie" />
+  </div>
+</section>
+
+<style>
+  dialog[open] {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 3rem;
+    background-color: #1e1e1e;
+    border: 2px solid #ff6b00;
+    box-shadow: 0 0 20px -5px black;
+    color: white;
+    width: 80%;
+    min-height: 300px;
+    z-index: 99;
+    margin: auto;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+</style>
+<button onclick="dialogRef.showModal()">Open</button>
+<dialog id="dialogRef">
+  <iframe
+    class="m-auto"
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/h3bTwCqX4ns?si=_glrbjiq5amrPDYg"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen
+  ></iframe>
+  <button class="mt-8" onclick="dialogRef.close()">Close</button>
+</dialog>

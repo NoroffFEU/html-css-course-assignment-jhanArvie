@@ -14,6 +14,44 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/* UTILITY */
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-col {
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.align-center {
+  align-items: center;
+}
+.m-auto {
+  margin: auto;
+}
+.marg-1 {
+  margin: 1rem;
+}
+
+.marg-2 {
+  margin: 2rem;
+}
+
+.color-1 {
+  color: #ff6b00;
+}
+
+.f-18 {
+  font-size: 1.1rem;
+}
+.f-25 {
+  font-size: 1.6rem;
+}
+
 /* NAVIGATION STARTS HERE */
 
 header {
@@ -195,9 +233,9 @@ nav .nav-menu li a:hover {
   border-bottom: 7px solid #ff6b00;
   padding-bottom: 0.4rem;
   left: 0;
-  bottom: 0.5rem;
+  bottom: -3rem;
   padding-left: 8vw;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .home-featured h1 {
   color: #fff;
@@ -248,14 +286,16 @@ nav .nav-menu li a:hover {
 }
 
 /* Latest and Upcoming movies section*/
+
 .list {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 0;
+  margin: 1.5rem 0;
+  padding-left: 1rem;
 }
 
 .list .list-name h3 {
-  font-size: 19px;
+  font-size: 1.1rem;
   margin: 1rem;
 }
 .list .list-name p {
@@ -275,8 +315,8 @@ nav .nav-menu li a:hover {
 
 .list .list-images li {
   display: block;
-  height: 200px;
-  min-width: 140px;
+  height: 200px; /* height: 200px; */
+  min-width: 140px; /*  min-width: 140px; */
 }
 
 .list .list-images li img {
@@ -284,17 +324,43 @@ nav .nav-menu li a:hover {
   object-fit: cover;
 }
 
-.grid-list .grid-list-name {
+.movie-grid {
+  margin: 0 2rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: row;
+  overflow-x: scroll;
+  scrollbar-color: orange rgba(0, 0, 0, 0.2);
+  gap: 1rem;
+
+  .movie-entry {
+    min-width: 140px;
+  }
 }
 
-.grid-list .grid-list-name a {
-  margin: 1rem;
+.grid-meta {
+  padding: 0 1rem;
+
+  p {
+    display: none;
+  }
 }
 
-/* DESKTOP STARTS HERE */
+.line {
+  margin: 5rem 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6b00;
+}
+
+.hero-image-2 {
+  background: url(/assets/images/poster-pictures//square-19.png) no-repeat
+    center;
+  background-size: cover;
+  height: 250px; /* change this on desktop */
+  margin: 0;
+}
+
+/* --------------DESKTOP STARTS HERE-------------- */
 @media screen and (min-width: 769px) {
   .hamburger,
   .toggle-menu {
@@ -349,6 +415,7 @@ nav .nav-menu li a:hover {
   .cus-plybtn {
     display: none;
   }
+
   .home-hero {
     padding: 0 0;
     justify-items: start;
@@ -401,11 +468,18 @@ nav .nav-menu li a:hover {
     background-color: #b94e02;
   }
 
+  section,
+  header,
+  footer {
+    max-width: 1280px;
+    margin: auto;
+  }
+
   /* Latest and Upcoming movies section*/
   .list {
     flex-direction: row;
     gap: 2rem;
-    padding: 0;
+    margin: 3rem 2rem;
   }
 
   .list .list-name h3 {
@@ -440,6 +514,7 @@ nav .nav-menu li a:hover {
   }
 
   .list .list-images-wrapper::before {
+    content: "";
     z-index: 10;
     width: 60px;
     height: 200px;
@@ -453,20 +528,44 @@ nav .nav-menu li a:hover {
     border: 1px solid #ff6b00;
   }
 
-  section {
-    max-width: 1280px;
+  /* GRID MOVIES */
+  .grid-container {
+    max-width: 1100px; /* max-width: 1280px; */
     margin: auto;
     padding: 2rem 2rem !important;
+  }
+
+  .grid-meta {
+    padding: 0;
+
+    p {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  .grid-name {
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    a {
+      font-size: 1.1rem;
+    }
   }
 
   .movie-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 1rem;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    gap: 1.5rem;
+    margin: 0 0;
+    padding: 0 0;
   }
 
   .movie-grid .movie-entry.featured {
+    /* Big picture that placed on grid */
     grid-column: 4 / 6;
     grid-row: 1 / 3;
   }
@@ -474,51 +573,5 @@ nav .nav-menu li a:hover {
   .movie-grid .movie-entry img {
     height: 100%;
     object-fit: cover;
-  }
-
-  /* GRID FOR MOVIES */
-
-  .grid-list .list-images {
-    overflow-x: none; /* scrolling horizontal */
-  }
-  .grid-list {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 50% 50%;
-    gap: 1rem;
-  }
-
-  .grid-list img {
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .grid-name {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .grid-1 {
-    grid-area: 1 / 1 / 2 / 2;
-  }
-
-  .grid-2 {
-    grid-area: 1 / 2 / 2 / 3;
-  }
-  .grid-3 {
-    grid-area: 1 / 3 / 2 / 4;
-  }
-  .grid-4 {
-    grid-area: 1 / 4 / 3 / 6;
-  }
-
-  .grid-5 {
-    grid-area: 2 / 1 / 3 /2;
-  }
-  .grid-6 {
-    grid-area: 2 / 2 / 3 /3;
-  }
-  .grid-7 {
-    grid-area: 2 / 3 / 3 /4;
   }
 }
