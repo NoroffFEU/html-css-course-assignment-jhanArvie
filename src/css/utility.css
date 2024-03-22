@@ -39,13 +39,13 @@ body {
   align-items: center;
 }
 
-.t-algn-right {
+.txt-algn-right {
   text-align: right;
 }
-.t-algn-left {
+.txt-algn-left {
   text-align: left;
 }
-.t-algn-center {
+.txt-algn-center {
   text-align: center;
 }
 
@@ -117,4 +117,26 @@ body {
 
 .pointer {
   cursor: pointer;
+}
+
+/* ----------------GENERIC BUTTON---------------- */
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  &.btn-primary {
+    background-color: #ff6b00;
+    color: white;
+  }
+
+  &.btn-secondary {
+    background-color: #858585;
+    color: white;
+  }
 }

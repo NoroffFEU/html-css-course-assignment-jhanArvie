@@ -143,6 +143,13 @@ body {
   display: none;
 }
 
+.ff-oswald {
+  font-family: Oswald;
+}
+.ff-kantumruy {
+  font-family: kantumruy;
+}
+
 .btn {
   display: flex;
   flex-direction: row;
@@ -376,7 +383,7 @@ nav .nav-menu li a:hover {
   border: 2px solid #ff6b00;
   background: transparent;
 
-  color: pointer;
+  cursor: pointer;
 }
 
 .cus-plybtn::before {
@@ -460,7 +467,7 @@ nav .nav-menu li a:hover {
     background: url(/assets/images/poster-pictures/square-5.png) no-repeat
       center;
     background-size: cover;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: auto;
   }
 
@@ -468,6 +475,7 @@ nav .nav-menu li a:hover {
     display: flex;
     padding: 2rem 3rem;
     flex-direction: column;
+    gap: 1rem;
 
     h2 {
       font-size: 35px;
@@ -480,11 +488,11 @@ nav .nav-menu li a:hover {
       place-items: center;
       border: 2px solid #ff6b00;
       border-radius: 100px;
-      width: 96px;
-      height: 96px;
+      width: 70px;
+      height: 70px;
       margin: auto;
       span {
-        font-size: 72px;
+        font-size: 60px;
       }
     }
 
@@ -496,6 +504,10 @@ nav .nav-menu li a:hover {
       display: flex;
       flex-direction: row;
       gap: 1rem;
+    }
+
+    .hidden-watch {
+      display: none;
     }
   }
 }
@@ -565,6 +577,8 @@ footer ul {
 footer .brand-name {
   font-size: 28px;
 }
+
+/* ----------------MOVIES STARTS HERE---------------- */
 
 /* --------------DESKTOP STARTS HERE-------------- */
 @media screen and (min-width: 769px) {
@@ -649,6 +663,9 @@ footer .brand-name {
   .fs-28-lg {
     font-size: 1.175rem;
   }
+  .fs-48 {
+    font-size: 3rem;
+  }
 
   .fw-4-lg {
     font-weight: 400;
@@ -703,6 +720,10 @@ footer .brand-name {
       }
 
       .movie-description {
+        display: block;
+        max-width: 30vw;
+      }
+      .hidden-watch {
         display: block;
       }
     }
@@ -966,7 +987,7 @@ footer .brand-name {
     padding-left: 0;
     justify-content: space-around;
     flex-direction: row;
-    padding: 5rem 0;
+    padding: 4rem 0;
     margin: 0 auto;
   }
 
