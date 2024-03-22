@@ -27,35 +27,145 @@ body {
 .space-between {
   justify-content: space-between;
 }
+.justify-center {
+  justify-content: center;
+}
+.justify-start {
+  justify-content: start;
+}
+.justify-end {
+  justify-content: end;
+}
 .align-center {
   align-items: center;
+}
+.block {
+  display: block;
+}
+
+.t-algn-right {
+  text-align: right;
+}
+.t-algn-left {
+  text-align: left;
+}
+.t-algn-center {
+  text-align: center;
+}
+
+.pad-0 {
+  padding: 0 0;
+}
+
+.m-0 {
+  margin: 0 0;
 }
 .m-auto {
   margin: auto;
 }
-.marg-1 {
+.m-1 {
   margin: 1rem;
 }
-
-.marg-2 {
+.m-2 {
   margin: 2rem;
 }
 
-.color-1 {
+.clr-primary {
   color: #ff6b00;
 }
-
-.f-18 {
-  font-size: 1.1rem;
-}
-.f-25 {
-  font-size: 1.6rem;
+.clr-secondary {
+  color: #858585;
 }
 
+.bg-clr-primary {
+  background-color: #1e1e1e;
+}
+.bg-clr-secondary {
+  background-color: #fff;
+}
+.bg-clr-3rd {
+  background-color: #85858596;
+}
+
+.fs-16 {
+  font-size: 1rem;
+}
+.fs-18 {
+  font-size: 1.125rem;
+}
+.fs-22 {
+  font-size: 1.375rem;
+}
+.fs-26 {
+  font-size: 1.625rem;
+}
+.fs-28 {
+  font-size: 1.175rem;
+}
+
+.fw-4 {
+  font-weight: 400;
+}
+.fw-5 {
+  font-weight: 500;
+}
+.fw-6 {
+  font-weight: 600;
+}
+.fw-7 {
+  font-weight: 700;
+}
+.fw-8 {
+  font-weight: 800;
+}
+.fw-9 {
+  font-weight: 900;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+  &.btn-primary {
+    background-color: #ff6b00;
+    color: white;
+  }
+
+  &.btn-secondary {
+    background-color: #858585;
+    color: white;
+  }
+}
 /* NAVIGATION STARTS HERE */
 
 header {
-  /* background-color: red; */ /* remove later */
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -81,7 +191,6 @@ header .brand {
 
 .search-container {
   margin-left: 20px;
-  /* background-color: red; */
   display: flex;
   align-items: center;
   border-bottom: 2px solid #ff6b00;
@@ -241,9 +350,6 @@ nav .nav-menu li a:hover {
   color: #fff;
   font-family: Oswald;
   font-size: 35px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 }
 
 .view-details {
@@ -253,9 +359,6 @@ nav .nav-menu li a:hover {
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .watch-btn {
   display: none;
@@ -352,16 +455,259 @@ nav .nav-menu li a:hover {
   background-color: #ff6b00;
 }
 
+.movie-banner {
+  &.trojan-war {
+    background: url(/assets/images/poster-pictures/square-5.png) no-repeat
+      center;
+    background-size: cover;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .movie-banner-content {
+    display: flex;
+    padding: 2rem 3rem;
+    flex-direction: column;
+
+    h2 {
+      font-size: 35px;
+      text-align: right;
+      margin: 0 0 0.5rem;
+    }
+
+    .movie-banner-play-icon {
+      display: grid;
+      place-items: center;
+      border: 2px solid #ff6b00;
+      border-radius: 100px;
+      width: 96px;
+      height: 96px;
+      margin: auto;
+      span {
+        font-size: 72px;
+      }
+    }
+
+    .movie-description {
+      display: none;
+    }
+
+    .button-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+  }
+}
+
 .hero-image-2 {
-  background: url(/assets/images/poster-pictures//square-19.png) no-repeat
-    center;
+  background: url(/assets/images/poster-pictures/square-5.png) no-repeat center;
   background-size: cover;
-  height: 250px; /* change this on desktop */
+  height: 200px; /* bigger size on desktop */
   margin: 0;
+}
+.home-hero-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  height: 200px;
+
+  .watch-btn {
+    display: none;
+  }
+}
+
+.home-hero-2 p {
+  display: none;
+}
+
+.home-hero-2 h1 {
+  color: #fff;
+  font-family: Oswald;
+  font-size: 35px;
+  margin: 0 0;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+.home-hero-2 .view-details {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.dwn-banner {
+  gap: 2rem;
+  padding: 3rem;
+  margin: 3rem auto;
+}
+.dwn-banner div p {
+  font-weight: 600;
+  text-align: right;
+  font-family: Oswald;
+  width: 164px;
+}
+
+footer .container {
+  padding: 5rem;
+}
+
+footer ul li,
+a {
+  font-size: 1.375rem;
+}
+footer ul {
+  list-style: none;
+}
+footer .brand-name {
+  font-size: 28px;
 }
 
 /* --------------DESKTOP STARTS HERE-------------- */
 @media screen and (min-width: 769px) {
+  /* UTILITY */
+  .flex-lg {
+    display: flex;
+  }
+  .flex-row-lg {
+    flex-direction: row;
+  }
+  .flex-col-lg {
+    flex-direction: column;
+  }
+  .space-between-lg {
+    justify-content: space-between;
+  }
+  .justify-center-lg {
+    justify-content: center;
+  }
+  .justify-start-lg {
+    justify-content: start;
+  }
+  .justify-end-lg {
+    justify-content: end;
+  }
+  .align-center-lg {
+    align-items: center;
+  }
+  .block-lg {
+    display: block;
+  }
+  .inline-block-lg {
+    display: inline-block;
+  }
+
+  .t-algn-right-lg {
+    text-align: right;
+  }
+  .t-algn-left-lg {
+    text-align: left;
+  }
+  .t-algn-center-lg {
+    text-align: center;
+  }
+
+  .pad-0-lg {
+    padding: 0 0;
+  }
+
+  .m-0-lg {
+    margin: 0 0;
+  }
+  .m-auto-lg {
+    margin: auto;
+  }
+  .m-1-lg {
+    margin: 1rem;
+  }
+  .m-2-lg {
+    margin: 2rem;
+  }
+
+  .clr-primary-lg {
+    color: #ff6b00;
+  }
+  .clr-secondary-lg {
+    color: #858585;
+  }
+
+  .fs-16-lg {
+    font-size: 1rem;
+  }
+  .fs-18-lg {
+    font-size: 1.125rem;
+  }
+  .fs-22-lg {
+    font-size: 1.375rem;
+  }
+  .fs-26-lg {
+    font-size: 1.625rem;
+  }
+  .fs-28-lg {
+    font-size: 1.175rem;
+  }
+
+  .fw-4-lg {
+    font-weight: 400;
+  }
+  .fw-5-lg {
+    font-weight: 500;
+  }
+  .fw-6-lg {
+    font-weight: 600;
+  }
+  .fw-7-lg {
+    font-weight: 700;
+  }
+  .fw-8-lg {
+    font-weight: 800;
+  }
+  .fw-9-lg {
+    font-weight: 900;
+  }
+
+  .gap-1-lg {
+    gap: 1rem;
+  }
+  .gap-2-lg {
+    gap: 2rem;
+  }
+  .gap-3-lg {
+    gap: 3rem;
+  }
+
+  .relative-lg {
+    position: relative;
+  }
+  .absolute-lg {
+    position: absolute;
+  }
+
+  .pointer-lg {
+    cursor: pointer;
+  }
+  .hidden-lg {
+    display: none;
+  }
+  .movie-banner {
+    .movie-banner-content {
+      h2 {
+        text-align: left;
+      }
+
+      .movie-banner-play-icon {
+        display: none;
+      }
+
+      .movie-description {
+        display: block;
+      }
+    }
+  }
+
   .hamburger,
   .toggle-menu {
     display: none;
@@ -573,5 +919,62 @@ nav .nav-menu li a:hover {
   .movie-grid .movie-entry img {
     height: 100%;
     object-fit: cover;
+  }
+
+  /* Home TV SERIES STARTS HERE */
+  .hero-image-2 {
+    height: 300px; /* bigger size on desktop */
+  }
+  .home-hero-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 1rem;
+    height: 300px;
+
+    .watch-btn {
+      display: block;
+    }
+  }
+
+  .home-hero-2 p {
+    display: block;
+    position: relative;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+  }
+
+  .dwn-banner {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    margin: 3rem auto;
+  }
+  .dwn-banner div p {
+    font-weight: 600;
+    text-align: right;
+    font-family: Oswald;
+    width: 165px;
+  }
+
+  footer .container {
+    padding-left: 0;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 5rem 0;
+    margin: 0 auto;
+  }
+
+  footer ul li,
+  a {
+    font-size: 1.375rem;
+  }
+  footer .brand-name {
+    font-size: 28px;
   }
 }

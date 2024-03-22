@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
     <link rel="stylesheet" href="src/css/styles.css" />
   </head>
   <body>
@@ -137,7 +141,9 @@
 
             <a href="movies.html" class="marg-1">View all</a>
           </div>
-          <p class="color-1">Here are the most recommended movies for you.</p>
+          <p class="clr-primary">
+            Here are the most recommended movies for you.
+          </p>
         </div>
         <div class="movie-grid">
           <div class="movie-entry">
@@ -185,23 +191,210 @@
         </div>
       </section>
 
-      <div class="line color-1"></div>
+      <div class="line clr-primary"></div>
 
-      <figure class="hero-image-2">
-        <section class="home-hero-2">
-          <div class="cus-plybtn"></div>
-          <div class="home-featured-2">
-            <h1>Trojan War</h1>
-            <p>
-              In a future where artificial intelligence has turned against
-              humanity, a small band of rebels must navigate a treacherous
-              landscape of advanced technology.
-            </p>
-            <a class="watch-btn">Watch </a>
-            <a class="view-details">View Details</a>
+      <div class="movie-banner trojan-war">
+        <div class="movie-banner-content">
+          <h2>Trojan War</h2>
+          <a class="movie-banner-play-icon" href="#">
+            <span class="material-symbols-sharp"> play_arrow </span>
+          </a>
+          <p class="hidden movie-description">
+            In a future where artificial intelligence has turned against
+            humanity, a small band of rebels must navigate a treacherous
+            landscape of advanced technology.
+          </p>
+          <div class="button-wrapper">
+            <a class="btn btn-primary hidden flex-lg" href="#">
+              <span>Watch</span>
+              <span class="material-symbols-sharp"> play_arrow </span>
+            </a>
+            <a class="btn btn-secondary" href="#">
+              <span>View Details</span>
+            </a>
           </div>
-        </section>
-      </figure>
+        </div>
+      </div>
+      <section class="flex-container">
+        <div class="list">
+          <div class="list-name">
+            <h3>Latest TV Series</h3>
+            <p>Up to date list of highly recommended movies.</p>
+          </div>
+          <div class="list-images-wrapper">
+            <ul class="list-images">
+              <li>
+                <img
+                  src="/assets/images/poster-pictures/portrait-1.jpeg"
+                  alt="Lates Movie"
+                />
+              </li>
+              <li>
+                <img
+                  src="/assets/images/poster-pictures/portrait-2.jpeg"
+                  alt="Lates Movie"
+                />
+              </li>
+              <li>
+                <img
+                  src="/assets/images/poster-pictures/portrait-3.jpeg"
+                  alt="Lates Movie"
+                />
+              </li>
+              <li>
+                <img
+                  src="/assets/images/poster-pictures/portrait-4.jpeg"
+                  alt="Lates Movie"
+                />
+              </li>
+              <li>
+                <img
+                  src="/assets/images/poster-pictures/portrait-5.jpeg"
+                  alt="Lates Movie"
+                />
+              </li>
+              <li>
+                <img
+                  src="/assets/images/poster-pictures/portrait-6.jpeg"
+                  alt="Lates Movie"
+                />
+              </li>
+              <li>
+                <img
+                  src="/assets/images/poster-pictures/portrait-7.jpeg"
+                  alt="Lates Movie"
+                />
+              </li>
+              <li>
+                <img
+                  src="/assets/images/poster-pictures/portrait-8.jpeg"
+                  alt="Lates Movie"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="grid-container">
+        <div class="grid-meta">
+          <div class="grid-name flex flex-row space-between align-center">
+            <h3 class="marg-1">Movies</h3>
+
+            <a href="movies.html" class="marg-1">View all</a>
+          </div>
+          <p class="clr-primary">
+            Here are the most recommended movies for you.
+          </p>
+        </div>
+        <div class="movie-grid">
+          <div class="movie-entry">
+            <img
+              src="/assets/images/poster-pictures/portrait-8.jpeg"
+              alt="Movie"
+            />
+          </div>
+          <div class="movie-entry">
+            <img
+              src="/assets/images/poster-pictures/portrait-8.jpeg"
+              alt="Movie"
+            />
+          </div>
+          <div class="movie-entry">
+            <img
+              src="/assets/images/poster-pictures/portrait-7.jpeg"
+              alt="Movie"
+            />
+          </div>
+          <div class="movie-entry featured">
+            <img
+              src="/assets/images/poster-pictures/portrait-6.jpeg"
+              alt="Movie"
+            />
+          </div>
+          <div class="movie-entry">
+            <img
+              src="/assets/images/poster-pictures/portrait-5.jpeg"
+              alt="Movie"
+            />
+          </div>
+          <div class="movie-entry">
+            <img
+              src="/assets/images/poster-pictures/portrait-4.jpeg"
+              alt="Movie"
+            />
+          </div>
+          <div class="movie-entry">
+            <img
+              src="/assets/images/poster-pictures/portrait-3.jpeg"
+              alt="Movie"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="dwn-banner flex flex-col align-center bg-clr-3rd">
+        <div class="flex">
+          <p>Latest movies available for streaming</p>
+          <img src="/assets/images/icons/Cinema.png" alt="cinema" />
+        </div>
+        <div class="flex">
+          <p>Watch Movies and TV Series In Good quality</p>
+          <img src="/assets/images/icons/4k.png" alt="4k" />
+        </div>
+        <div class="flex">
+          <p>Watch Movies and TV Series In Good quality</p>
+          <img src="/assets/images/icons/Closed Captioning.png" alt="CC" />
+        </div>
+      </section>
     </main>
+    <div class="line color-1"></div>
+    <footer class="">
+      <div class="container flex flex-col gap-1 align-center-lg">
+        <div class="flex">
+          <a href="index.html"
+            ><img
+              class="brand-image"
+              src="/assets/images/logo.png"
+              alt="Camera Logo Image"
+              height="75px"
+              width="75px"
+          /></a>
+          <h2 class="brand-name">
+            Square <br />
+            Eyes
+          </h2>
+        </div>
+
+        <ul class="flex flex-col pad-0 gap-1 flex-row-lg">
+          <li><a href="">Home</a></li>
+          <li><a href="">Movies</a></li>
+          <li><a href="">TV Series</a></li>
+          <li><a href="">About us</a></li>
+        </ul>
+        <a href="contacts.html">Contacts</a>
+        <div class="scl-media-icons">
+          <ul class="flex gap-1 pad-0">
+            <li>
+              <a href="#" class="block"
+                ><img src="/assets/images/icons/Facebook.png" alt="fb"
+              /></a>
+            </li>
+            <li>
+              <a href="#" class="block"
+                ><img
+                  src="/assets/images/icons/Instagram Circle.png"
+                  alt="instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#" class="block"
+                ><img
+                  src="/assets/images/icons/Movie Projector.png"
+                  alt="cinema"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
