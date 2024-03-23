@@ -86,6 +86,9 @@ body {
 .bg-clr-3rd {
   background-color: #85858596;
 }
+.bg-clr-brand {
+  background-color: #ff6b00;
+}
 
 .fs-16 {
   font-size: 1rem;
@@ -101,6 +104,15 @@ body {
 }
 .fs-28 {
   font-size: 1.175rem;
+}
+.fs-32 {
+  font-size: 2rem;
+}
+.fs-48 {
+  font-size: 3rem;
+}
+.fs-56 {
+  font-size: 3.5rem;
 }
 
 .fw-4 {
@@ -150,6 +162,12 @@ body {
   font-family: kantumruy;
 }
 
+.max-w-1280 {
+  max-width: 1280px;
+}
+.max-w-content {
+  max-width: fit-content;
+}
 .btn {
   display: flex;
   flex-direction: row;
@@ -168,6 +186,18 @@ body {
   &.btn-secondary {
     background-color: #858585;
     color: white;
+  }
+}
+.generic-play-btn {
+  display: grid;
+  place-items: center;
+  border: 2px solid #ff6b00;
+  border-radius: 100px;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  span {
+    font-size: 60px;
   }
 }
 /* NAVIGATION STARTS HERE */
@@ -372,21 +402,23 @@ nav .nav-menu li a:hover {
 }
 /* move to desktop */
 
-.cus-plybtn {
+.cus-plybtn,
+.cus-plybtn-2 {
   font-size: 5em; /* the content inside the circle */
-  color: #fff;
+  color: #ff6b00;
   display: grid; /* to place the triangle in the center */
   place-items: center; /* to place the triangle in the center */
   height: 1em; /* the container */
   width: 1em;
   border-radius: 50%;
-  border: 2px solid #ff6b00;
+  border: 2px solid #fff;
   background: transparent;
 
   cursor: pointer;
 }
 
-.cus-plybtn::before {
+.cus-plybtn::before,
+.cus-plybtn-2::before {
   /*  the triangle in the middle */
   content: "";
   display: inline-block;
@@ -577,9 +609,41 @@ footer ul {
 footer .brand-name {
   font-size: 28px;
 }
-
+.h1-heading span {
+  padding: 0 10vw;
+}
 /* ----------------MOVIES STARTS HERE---------------- */
+.movies-hero-img {
+  background: url(/assets/images/poster-pictures/f-square-5.png) no-repeat
+    center;
+  background-size: cover;
+  height: 400px; /* change this on desktop */
+  margin: 0;
 
+  .movie-name {
+    bottom: 1rem;
+    padding: 0 2rem 0.5rem 2rem;
+    border-bottom: 7px solid #ff6b00;
+  }
+}
+.top-10 {
+  overflow-x: scroll;
+}
+
+/*----- top 10 starts here----- */
+.tp-10-img {
+  display: flex;
+
+  h4 {
+    font-size: 135px;
+    margin: 0;
+  }
+  img {
+    width: 140px;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 /* --------------DESKTOP STARTS HERE-------------- */
 @media screen and (min-width: 769px) {
   /* UTILITY */
@@ -663,8 +727,11 @@ footer .brand-name {
   .fs-28-lg {
     font-size: 1.175rem;
   }
-  .fs-48 {
+  .fs-48-lg {
     font-size: 3rem;
+  }
+  .fs-56-lg {
+    font-size: 3.5rem;
   }
 
   .fw-4-lg {
@@ -776,7 +843,7 @@ footer .brand-name {
 
   /* HERO SECTION */
   .hero-image {
-    height: 750px; /* change this on desktop */
+    height: 600px; /* change this on desktop */
   }
 
   .cus-plybtn {
@@ -997,5 +1064,17 @@ footer .brand-name {
   }
   footer .brand-name {
     font-size: 28px;
+  }
+
+  /* ----------------MOVIES STARTS HERE---------------- */
+  .movies-hero-img {
+    height: 600px; /* change this on desktop */
+    margin: 0;
+
+    .movie-name {
+      bottom: 5rem;
+      padding: 0 4rem 0.5rem 4rem;
+      border-bottom: 10px solid #ff6b00;
+    }
   }
 }
