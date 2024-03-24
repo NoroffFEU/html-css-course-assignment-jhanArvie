@@ -168,6 +168,11 @@ body {
 .max-w-content {
   max-width: fit-content;
 }
+
+.scroll-x {
+  overflow-x: scroll;
+  scrollbar-color: orange rgba(0, 0, 0, 0.2);
+}
 .btn {
   display: flex;
   flex-direction: row;
@@ -238,6 +243,7 @@ header .brand {
 }
 
 .search-input {
+  color: #fff;
   border: none;
   outline: none;
   background-color: transparent;
@@ -626,22 +632,73 @@ footer .brand-name {
     border-bottom: 7px solid #ff6b00;
   }
 }
-.top-10 {
-  overflow-x: scroll;
+
+.top-10-container {
+  padding: 0 2rem;
 }
 
-/*----- top 10 starts here----- */
-.tp-10-img {
+.list-10-img {
   display: flex;
-
-  h4 {
-    font-size: 135px;
-    margin: 0;
-  }
-  img {
-    width: 140px;
-    height: 100%;
+  overflow-x: scroll;
+  gap: 1rem;
+  scrollbar-color: orange rgba(0, 0, 0, 0.2);
+  .top-contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 220px;
     object-fit: cover;
+    padding: 1rem 0;
+
+    h4 {
+      font-size: 150px;
+      max-width: 100px;
+
+      z-index: 1;
+
+      margin: 0;
+    }
+    img {
+      min-width: 135px;
+      max-width: 140px;
+      max-height: 206px;
+      z-index: 10;
+      position: relative;
+      right: 1.5rem;
+      border: 1.5px solid #ff6b00;
+    }
+  }
+  .top-last h4 {
+    font-size: 80px;
+  }
+}
+.bar {
+  width: 10vw;
+  height: 5px;
+  background-color: #ff6b00;
+}
+.cat-container {
+  margin: 5rem 2rem;
+  .cat-images {
+    padding: 1rem 0;
+  }
+}
+.cat-container .cat-images img {
+  min-width: 140px;
+  max-width: 150px;
+}
+
+/* ---TV SERIES STARTS HERE--- */
+.tv-series-hero-img {
+  background: url(/assets/images/poster-pictures/f-square-6.png) no-repeat
+    center;
+  background-size: cover;
+  height: 400px; /* change this on desktop */
+  margin: 0;
+
+  .movie-name {
+    bottom: 1rem;
+    padding: 0 2rem 0.5rem 2rem;
+    border-bottom: 7px solid #ff6b00;
   }
 }
 /* --------------DESKTOP STARTS HERE-------------- */
@@ -1068,6 +1125,20 @@ footer .brand-name {
 
   /* ----------------MOVIES STARTS HERE---------------- */
   .movies-hero-img {
+    height: 600px; /* change this on desktop */
+    margin: 0;
+
+    .movie-name {
+      bottom: 5rem;
+      padding: 0 4rem 0.5rem 4rem;
+      border-bottom: 10px solid #ff6b00;
+    }
+  }
+  /* ----------TV Series--------------- */
+  .tv-series-hero-img {
+    background: url(/assets/images/poster-pictures/f-square-6.png) no-repeat
+      center;
+    background-size: cover;
     height: 600px; /* change this on desktop */
     margin: 0;
 
