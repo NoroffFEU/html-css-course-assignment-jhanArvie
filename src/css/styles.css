@@ -27,6 +27,9 @@ body {
 .space-between {
   justify-content: space-between;
 }
+.space-around {
+  justify-content: space-around;
+}
 .justify-center {
   justify-content: center;
 }
@@ -55,6 +58,9 @@ body {
 
 .pad-0 {
   padding: 0 0;
+}
+.pad-1 {
+  padding: 1rem;
 }
 
 .m-0 {
@@ -88,6 +94,9 @@ body {
 }
 .bg-clr-brand {
   background-color: #ff6b00;
+}
+.bg-clr-black {
+  background-color: black;
 }
 
 .fs-16 {
@@ -161,12 +170,21 @@ body {
 .ff-kantumruy {
   font-family: kantumruy;
 }
+.ff-outfit {
+  font-family: outfit;
+}
 
 .max-w-1280 {
   max-width: 1280px;
 }
 .max-w-content {
   max-width: fit-content;
+}
+.z-index-0 {
+  z-index: 0;
+}
+.z-index-10 {
+  z-index: 10;
 }
 
 .scroll-x {
@@ -190,6 +208,11 @@ body {
 
   &.btn-secondary {
     background-color: #858585;
+    color: white;
+  }
+  &.btn-third {
+    background: rgba(255, 171, 111, 0.5);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
     color: white;
   }
 }
@@ -661,7 +684,7 @@ footer .brand-name {
       min-width: 135px;
       max-width: 140px;
       max-height: 206px;
-      z-index: 10;
+      z-index: 5;
       position: relative;
       right: 1.5rem;
       border: 1.5px solid #ff6b00;
@@ -677,14 +700,22 @@ footer .brand-name {
   background-color: #ff6b00;
 }
 .cat-container {
-  margin: 5rem 2rem;
+  margin: 5rem auto;
   .cat-images {
     padding: 1rem 0;
+  }
+  .cat-name {
+    margin: 0 2rem;
+  }
+  .cat-images {
+    margin: 0 2rem;
   }
 }
 .cat-container .cat-images img {
   min-width: 140px;
   max-width: 150px;
+  min-height: 215px;
+  max-height: 222px;
 }
 
 /* ---TV SERIES STARTS HERE--- */
@@ -701,6 +732,23 @@ footer .brand-name {
     border-bottom: 7px solid #ff6b00;
   }
 }
+/* --view-movies.html starts here ----*/
+.movie-prod-bg {
+  background: url(/assets/images/poster-pictures/f-square-7.png) no-repeat
+    center;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+}
+
+.movie-prod-img img {
+  height: 375px;
+  padding-top: 2rem;
+}
+.rating {
+  color: yellow;
+}
+
 /* --------------DESKTOP STARTS HERE-------------- */
 @media screen and (min-width: 769px) {
   /* UTILITY */
@@ -783,6 +831,9 @@ footer .brand-name {
   }
   .fs-28-lg {
     font-size: 1.175rem;
+  }
+  .fs-32-lg {
+    font-size: 2rem;
   }
   .fs-48-lg {
     font-size: 3rem;
