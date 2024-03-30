@@ -62,6 +62,9 @@ body {
 .pad-1 {
   padding: 1rem;
 }
+.pad-2 {
+  padding: 2rem;
+}
 
 .m-0 {
   margin: 0 0;
@@ -81,6 +84,9 @@ body {
 }
 .clr-secondary {
   color: #858585;
+}
+.clr-white {
+  color: #fff;
 }
 
 .bg-clr-primary {
@@ -148,6 +154,9 @@ body {
 }
 .gap-2 {
   gap: 2rem;
+}
+.gap-3 {
+  gap: 3rem;
 }
 
 .relative {
@@ -738,7 +747,6 @@ footer .brand-name {
     center;
   background-size: cover;
   height: 400px;
-  width: 100%;
 }
 
 .movie-prod-img img {
@@ -747,6 +755,82 @@ footer .brand-name {
 }
 .rating {
   color: yellow;
+}
+/* --view-tv-series.html starts here ----*/
+.tv-series-prod-bg {
+  background: url(/assets/images/poster-pictures/f-square-8.png) no-repeat
+    center;
+  background-size: cover;
+  height: 400px;
+}
+
+.tv-series-prod-img img {
+  height: 375px;
+  padding-top: 2rem;
+}
+/* ---------------------dialog episodes--------------------- */
+.backdrop::backdrop {
+  background: #1e1e1e;
+  opacity: 0.75;
+}
+.backdrop {
+  border: none;
+}
+.episodes {
+  max-width: 600px;
+
+  border: none;
+  .eps-btn {
+    position: fixed;
+    button {
+      position: relative;
+      top: 1rem;
+      left: 1rem;
+    }
+  }
+  .eps-list {
+    text-align: center;
+  }
+  .eps {
+    margin: 1rem 2rem;
+
+    h5 {
+      font-size: 1.5rem;
+      margin: 1rem;
+    }
+  }
+}
+.bar-out {
+  width: 98%;
+  height: 5px;
+  background-color: #ff6b00;
+}
+
+#dialogCheckOut::backdrop {
+  background: #000;
+  opacity: 0.75;
+}
+#dialogCheckOut {
+  border: none;
+  .back-btn {
+    margin: 1rem;
+  }
+}
+.payment-form {
+  label,
+  input {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 1rem;
+  }
+
+  input[type="text"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
 }
 
 /* --------------DESKTOP STARTS HERE-------------- */
@@ -1198,5 +1282,25 @@ footer .brand-name {
       padding: 0 4rem 0.5rem 4rem;
       border-bottom: 10px solid #ff6b00;
     }
+  }
+  /* --view-movies.html starts here ----*/
+  .movie-prod-bg {
+    height: 600px;
+
+    .prod-description {
+      max-width: 60%;
+      padding-bottom: 1rem;
+      border-bottom: 10px solid #ff6b00;
+    }
+  }
+  /* --view-tv-series.html starts here ----*/
+  .tv-series-prod-bg {
+    height: 600px;
+  }
+
+  .prod-description {
+    max-width: 60%;
+    padding-bottom: 1rem;
+    border-bottom: 10px solid #ff6b00;
   }
 }
