@@ -158,6 +158,9 @@ body {
 .gap-3 {
   gap: 3rem;
 }
+.gap-5 {
+  gap: 5rem;
+}
 
 .relative {
   position: relative;
@@ -181,6 +184,9 @@ body {
 }
 .ff-outfit {
   font-family: outfit;
+}
+.ff-agency-fb {
+  font-family: "Agency FB";
 }
 
 .max-w-1280 {
@@ -832,6 +838,77 @@ footer .brand-name {
     margin-bottom: 10px;
   }
 }
+/* about-us.html starts here */
+.about-us-hero {
+  background: url(/assets/images/poster-pictures/abt-us-bg.png) no-repeat center;
+  background-size: cover;
+  min-width: 367px;
+  min-height: 1000px;
+  max-height: 2000px;
+  max-width: 1280px;
+  margin: 5rem auto;
+  .abt-hero-container {
+    h1 {
+      margin: 10vw;
+    }
+    .abt-hero-info {
+      background-color: #1e1e1e;
+      opacity: 0.75;
+      padding: 3rem;
+      text-align: center;
+      margin: 10rem auto;
+      p {
+        margin: 0 10vw;
+      }
+    }
+  }
+}
+
+.banner {
+  background: url(/assets/images/poster-pictures/square-6.png) no-repeat center;
+  background-size: cover;
+  max-width: 1280px;
+
+  max-height: 768px;
+  min-height: 400px;
+  margin: 5rem auto;
+  .banner-info {
+    background-color: #000;
+    opacity: 0.75;
+    padding: 1rem;
+    max-width: 350px;
+  }
+}
+
+.collect-movies {
+  height: 540px;
+  width: 335px;
+  .abt-posters {
+    img {
+      width: 160px;
+      height: auto;
+    }
+    .middle {
+      z-index: 1;
+    }
+    .top {
+      top: 0px;
+      left: 0px;
+      z-index: 0;
+    }
+    .bottom {
+      bottom: 0px;
+      right: 0px;
+      z-index: 0;
+    }
+  }
+}
+.devices {
+  margin: 10rem auto;
+  .device-info {
+    max-width: 500px;
+  }
+}
 
 /* --------------DESKTOP STARTS HERE-------------- */
 @media screen and (min-width: 769px) {
@@ -953,6 +1030,9 @@ footer .brand-name {
   }
   .gap-3-lg {
     gap: 3rem;
+  }
+  .gap-5-lg {
+    gap: 5rem;
   }
 
   .relative-lg {
@@ -1302,5 +1382,27 @@ footer .brand-name {
     max-width: 60%;
     padding-bottom: 1rem;
     border-bottom: 10px solid #ff6b00;
+  }
+  .collect-movies {
+    .abt-posters {
+      max-width: 250px;
+      .middle {
+        width: 200px;
+        height: auto;
+      }
+      .top {
+        width: 150px;
+        height: auto;
+        left: 10%;
+      }
+      .bottom {
+        width: 150px;
+        height: auto;
+        right: 10%;
+      }
+    }
+  }
+  .collect-txt {
+    max-width: 500px;
   }
 }
