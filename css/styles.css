@@ -407,7 +407,7 @@ nav .nav-menu li a:hover {
 
 /* HERO SECTION */
 .hero-image {
-  background: url(/assets/images/poster-pictures/f-square-4.png) no-repeat
+  background: url(../assets/images/poster-pictures/f-square-4.png) no-repeat
     center;
   background-size: cover;
   height: 300px; /* change this on desktop */
@@ -549,7 +549,7 @@ nav .nav-menu li a:hover {
 
 .movie-banner {
   &.trojan-war {
-    background: url(/assets/images/poster-pictures/square-5.png) no-repeat
+    background: url(../assets/images/poster-pictures/square-5.png) no-repeat
       center;
     background-size: cover;
     max-width: 1280px;
@@ -598,7 +598,8 @@ nav .nav-menu li a:hover {
 }
 
 .hero-image-2 {
-  background: url(/assets/images/poster-pictures/square-5.png) no-repeat center;
+  background: url(../assets/images/poster-pictures/square-5.png) no-repeat
+    center;
   background-size: cover;
   height: 200px; /* bigger size on desktop */
   margin: 0;
@@ -667,7 +668,7 @@ footer .brand-name {
 }
 /* ----------------MOVIES STARTS HERE---------------- */
 .movies-hero-img {
-  background: url(/assets/images/poster-pictures/f-square-5.png) no-repeat
+  background: url(../assets/images/poster-pictures/f-square-5.png) no-repeat
     center;
   background-size: cover;
   height: 400px; /* change this on desktop */
@@ -744,7 +745,7 @@ footer .brand-name {
 
 /* ---TV SERIES STARTS HERE--- */
 .tv-series-hero-img {
-  background: url(/assets/images/poster-pictures/f-square-6.png) no-repeat
+  background: url(../assets/images/poster-pictures/f-square-6.png) no-repeat
     center;
   background-size: cover;
   height: 400px; /* change this on desktop */
@@ -758,7 +759,7 @@ footer .brand-name {
 }
 /* --view-movies.html starts here ----*/
 .movie-prod-bg {
-  background: url(/assets/images/poster-pictures/f-square-7.png) no-repeat
+  background: url(../assets/images/poster-pictures/f-square-7.png) no-repeat
     center;
   background-size: cover;
   height: 400px;
@@ -773,7 +774,7 @@ footer .brand-name {
 }
 /* --view-tv-series.html starts here ----*/
 .tv-series-prod-bg {
-  background: url(/assets/images/poster-pictures/f-square-8.png) no-repeat
+  background: url(../assets/images/poster-pictures/f-square-8.png) no-repeat
     center;
   background-size: cover;
   height: 400px;
@@ -849,7 +850,8 @@ footer .brand-name {
 }
 /* about-us.html starts here */
 .about-us-hero {
-  background: url(/assets/images/poster-pictures/abt-us-bg.png) no-repeat center;
+  background: url(../assets/images/poster-pictures/abt-us-bg.png) no-repeat
+    center;
   background-size: cover;
   min-width: 367px;
   min-height: 1000px;
@@ -874,7 +876,8 @@ footer .brand-name {
 }
 
 .banner {
-  background: url(/assets/images/poster-pictures/square-6.png) no-repeat center;
+  background: url(../assets/images/poster-pictures/square-6.png) no-repeat
+    center;
   background-size: cover;
   max-width: 1280px;
 
@@ -1419,7 +1422,7 @@ footer .brand-name {
   }
   /* ----------TV Series--------------- */
   .tv-series-hero-img {
-    background: url(/assets/images/poster-pictures/f-square-6.png) no-repeat
+    background: url(../assets/images/poster-pictures/f-square-6.png) no-repeat
       center;
     background-size: cover;
     height: 600px; /* change this on desktop */
